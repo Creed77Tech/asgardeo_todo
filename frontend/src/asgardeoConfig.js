@@ -1,4 +1,4 @@
-require('dotenv').config() 
+// require('dotenv').config() 
 
 const asgardeoConfig = {
     signInRedirectURL: "http://localhost:3000/",

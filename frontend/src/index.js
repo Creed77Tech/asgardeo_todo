@@ -5,7 +5,7 @@ import './tailwind.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { TaskContextProvider } from './context/taskContext';
-import asgardeoConfig from './asgardeoConfig.js'
+import asgardeoConfig from './asgardeoConfig'
 import { AuthProvider } from '@asgardeo/auth-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
