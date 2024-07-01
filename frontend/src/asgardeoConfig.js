@@ -1,8 +1,8 @@
 // require('dotenv').config() 
 
 const asgardeoConfig = {
-    signInRedirectURL: "http://localhost:3000/",
-    signOutRedirectURL: "http://localhost:3000/",
+    signInRedirectURL: "https://asgardeo-todo-gji2.vercel.app/",
+    signOutRedirectURL: "https://asgardeo-todo-gji2.vercel.app/",
     clientID: process.env.CLIENT_ID,
     baseUrl: process.env.BASE_URL,
     scope: [ "openid","profile", "email" ],
