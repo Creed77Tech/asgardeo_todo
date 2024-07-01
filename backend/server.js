@@ -30,6 +30,7 @@ app.use(express.json()) //for post and patch requests to send data to the data b
 //new Routes
 app.use('/api/tasks', tasksRoutes) // if we fire a request to '/api/tasksRoutes' then use tasksRoutes function
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
 /*npm install mongoose was used
 
 mongoose is a odm library (object data modeling), it basically raps up mongoDB with an extra layer of methods that allow us to read and
