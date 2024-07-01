@@ -46,6 +46,8 @@ mongoose.connect(process.env.MONGO_URI) //synchronus in nature which takes up a 
         app.listen(process.env.PORT, () => {
             console.log('connected to db & listening on port', process.env.PORT)
         })
+
+module.exports = app;
     }) //makes sure to fire this function when completed
     .catch((error) => {
         console.log(error) //errors may occur if the URI is not the same
