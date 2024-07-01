@@ -40,15 +40,16 @@ const mongoose = require('mongoose')
 
 // connect to db
 // we can also use mongoose to connect to the db inside the server.js
-mongoose.connect(process.env.MONGO_URI) //synchronus in nature which takes up a little bit of time, therefore it returns a promise
-    .then(() => {
-        // listen for reqests
-        app.listen(process.env.PORT, () => {
+// mongoose.connect(process.env.MONGO_URI) //synchronus in nature which takes up a little bit of time, therefore it returns a promise
+//     .then(() => {
+//         // listen for reqests
+        
+//     }) //makes sure to fire this function when completed
+//     .catch((error) => {
+//         console.log(error) //errors may occur if the URI is not the same
+//     })
+app.listen(process.env.PORT, () => {
             console.log('connected to db & listening on port', process.env.PORT)
         })
-    }) //makes sure to fire this function when completed
-    .catch((error) => {
-        console.log(error) //errors may occur if the URI is not the same
-    })
 
 module.exports = app;
