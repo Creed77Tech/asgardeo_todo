@@ -14,7 +14,7 @@ const DeletingList = ({ state, closeList }) => {
   const fetchTasks = async () => {
     const basicUserInfo = await getBasicUserInfo();
     // Fetch tasks data from your backend API
-    fetch("/api/tasks/" + basicUserInfo.sub)
+    fetch("https://asgardeo-todo.vercel.app/api/tasks/" + basicUserInfo.sub)
       .then((response) => response.json())
       .then((data) => setTasks(data))
       .catch((error) => console.error("Error fetching tasks:", error));
@@ -35,7 +35,7 @@ const DeletingList = ({ state, closeList }) => {
   const handleDeleteTasks = () => {
     tasks.map((task) => {
       if (task.selected === true) {
-        fetch("/api/tasks/" + task._id, {
+        fetch("https://asgardeo-todo.vercel.app/api/tasks/" + task._id, {
           method: "DELETE",
         })
           .then(() => {
