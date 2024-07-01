@@ -1,8 +1,11 @@
 require('dotenv').config() // used npm install dotenv, so we can use PORT in .env
 
 const express = require('express')
+const cors = require('cors')
+
 //create express app
 const app = express()
+app.use(cors());
 
 // // listen for reqests
 // app.listen(process.env.PORT, () => {
