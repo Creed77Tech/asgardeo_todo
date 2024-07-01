@@ -29,7 +29,7 @@ const TaskForm = ( {state, closeForm} ) => {
         const userID = basicUserInfo.sub;
         const task = {title, description, userID, importance}
 
-        const response = await fetch('/api/tasks', {
+        const response = await fetch('https://asgardeo-todo.vercel.app/api/tasks', {
             method: 'POST',
             body: JSON.stringify(task),
             headers: {
