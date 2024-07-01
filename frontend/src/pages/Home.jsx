@@ -17,7 +17,7 @@ const Home = () => {
     useEffect(() => {
         const fetchTasks = async () => {
             const basicUserInfo = await getBasicUserInfo();
-            const res = await fetch('api/tasks/' + basicUserInfo.sub)
+            const res = await fetch('https://asgardeo-todo.vercel.app/api/tasks/' + basicUserInfo.sub)
             console.log("response:", res);
             const json = await res.json()
             console.log("json:", json);
